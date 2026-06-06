@@ -34,36 +34,6 @@ eval "$(starship init zsh)"
 ## Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-_sesh_auto_start() {
-  if [[ -o interactive ]] && [ -z "$TMUX" ]; then
-    add-zsh-hook -d precmd _sesh_auto_start
-
-    local target
-    # Run fzf. Awk will automatically grab the selection (line 2) if it exists,
-    # otherwise it grabs your typed query (line 1). Tr cleans up newlines.
-    target=$(sesh list -i | fzf --print-query | awk 'END{print}' | tr -d '\n')
-
-    # If you pressed Esc or Ctrl+C, target will be completely blank.
-    # We exit the function safely and you get your normal local prompt.
-    if [ -z "$target" ]; then
-      return
-    fi
-
-    # Check if the chosen target is an existing session or path
-    if sesh list -i | grep -Fxq "$target"; then
-      # It exists! Connect with sesh
-      exec sesh connect "$target"
-    else
-      # It's a brand new name! Create it and attach natively with Tmux
-      tmux new-session -d -s "$target"
-      exec tmux attach-session -t "$target"
-    fi
-  fi
-}
-
-autoload -U add-zsh-hook
-add-zsh-hook precmd _sesh_auto_start
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
