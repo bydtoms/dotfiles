@@ -69,6 +69,6 @@ Neovim config adapted from [LazyVim](https://www.lazyvim.org/#%EF%B8%8F-requirem
 
 - [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 
-### waybar
+### Waybar
 
 - [waybar](https://github.com/alexays/waybar) - Uncomment this in `hypr/autostart` if used
