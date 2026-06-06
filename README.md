@@ -12,5 +12,8 @@ stow tmux
 
 ### Tmux
 
-- This config expects [sesh](https://github.com/joshmedeski/sesh?tab=readme-ov-file#readme) to be installed.
-- Uses [Vim Tmux Navigator](https://github.com/christoomey/vim-tmux-navigator) to allow easy navigation between vim and tmux.
+Requirements:
+
+- [sesh](https://github.com/joshmedeski/sesh?tab=readme-ov-file#readme)
+- [Vim Tmux Navigator](https://github.com/christoomey/vim-tmux-navigator)
+
