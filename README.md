@@ -60,3 +60,7 @@ Neovim config adapted from [LazyVim](https://www.lazyvim.org/#%EF%B8%8F-requirem
 - You can find the requirements at the link above
 - This config is preconfigured with [Neogit](https://github.com/neogitorg/neogit).
   So [Lazygit](https://github.com/jesseduffield/lazygit) is not required unless you wish to use it.
+
+### Rofi
+
+[Rofi](https://github.com/davatorium/rofi) is a program launcher
