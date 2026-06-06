@@ -39,5 +39,10 @@ Requirements:
 Additional Information:
 
 - While [Ghostty](#ghostty) is used as the terminal in this config,
-  Kitty is the default terminal for wayland,
+  [Kitty](#kitty) is the default terminal for wayland,
   so you may wish to have it installed in case this config breaks.
+
+### Kitty
+
+The configured font fo this terminal is [JetBrainsMono Nerd Font](ht.tps://www.programmingfonts.org/#jetbrainsmono)
+You will need to reconfigure this if you wish to use something else.
