@@ -35,6 +35,7 @@ Requirements:
 
 - [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - [waybar](https://github.com/alexays/waybar) - Uncomment this in `hypr/autostart` if used
+- [awww](https://codeberg.org/LGFae/awww) - Used to set the wallpaper
 
 Additional Information:
 
@@ -72,3 +73,7 @@ Neovim config adapted from [LazyVim](https://www.lazyvim.org/#%EF%B8%8F-requirem
 ### Waybar
 
 - [waybar](https://github.com/alexays/waybar) - Uncomment this in `hypr/autostart` if used
+
+### Wallpapers
+
+Includes my personal collection of wallpapers
