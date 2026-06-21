@@ -5,48 +5,48 @@
 #+OPTIONS: toc:2
 
 * TABLE OF CONTENTS :toc:
-- [[#important-programs-to-load-first][IMPORTANT PROGRAMS TO LOAD FIRST]]
+- [[#important-programs-to-load-first][Important Programs To Load First]]
   - [[#elpaca-package-manager][Elpaca Package Manager]]
   - [[#load-evil-mode][Load Evil Mode]]
   - [[#general-keybindings][General Keybindings]]
-- [[#all-the-icons][ALL THE ICONS]]
-- [[#buffer-move][BUFFER-MOVE]]
+- [[#all-the-icons][All The Icons]]
+- [[#buffer-move][Buffer-Move]]
 - [[#company][Company]]
-- [[#dashboard][DASHBOARD]]
-- [[#diminish][DIMINISH]]
-- [[#dired][DIRED]]
-- [[#flycheck][FLYCHECK]]
-- [[#fonts][FONTS]]
+- [[#dashboard][Dashboard]]
+- [[#diminish][Diminish]]
+- [[#dired][Dired]]
+- [[#flycheck][Flycheck]]
+- [[#fonts][Fonts]]
   - [[#setting-the-font-face][Setting the Font Face]]
   - [[#zooming-inout][Zooming In/Out]]
-- [[#git-programs][GIT PROGRAMS]]
+- [[#git-programs][Git Programs]]
   - [[#git-time-machine][Git Time Machine]]
   - [[#magit][Magit]]
-- [[#highlight-todo][HIGHLIGHT TODO]]
-- [[#ivy-counsel][IVY (COUNSEL)]]
-- [[#language-support][LANGUAGE SUPPORT]]
-- [[#minibuffer-escape][MINIBUFFER ESCAPE]]
-- [[#modeline][MODELINE]]
-- [[#org-mode][ORG MODE]]
+- [[#highlight-todo][Highlight TODO]]
+- [[#ivy-counsel][Ivy (Counsel)]]
+- [[#language-support][Language Support]]
+- [[#minibuffer-escape][Minibuffer Escape]]
+- [[#modeline][Modeline]]
+- [[#org-mode][Org Mode]]
   - [[#enabling-table-of-contents][Enabling Table of Contents]]
   - [[#enabling-org-bullets][Enabling Org Bullets]]
   - [[#org-level-headers][Org Level Headers]]
   - [[#source-code-block-tag-expansion][Source Code Block Tag Expansion]]
-- [[#projectile][PROJECTILE]]
-- [[#rainbow-delimiters][RAINBOW DELIMITERS]]
-- [[#rainbow-mode][RAINBOW MODE]]
-- [[#reload-emacs][RELOAD EMACS]]
-- [[#sane-defaults][SANE DEFAULTS]]
-- [[#shells-and-terminals][SHELLS AND TERMINALS]]
+- [[#projectile][Projectile]]
+- [[#rainbow-delimiters][Rainbow Delimiters]]
+- [[#rainbow-mode][Rainbow Mode]]
+- [[#reload-emacs][Reload Emacs]]
+- [[#sane-defaults][Sane Defaults]]
+- [[#shells-and-terminals][Shells And Terminals]]
   - [[#eshell][Eshell]]
   - [[#vterm][Vterm]]
   - [[#vterm-toggle][Vterm-Toggle]]
-- [[#sudo-edit][SUDO EDIT]]
-- [[#themes][THEMES]]
-- [[#transparency][TRANSPARENCY]]
-- [[#which-key][WHICH-KEY]]
+- [[#sudo-edit][Sudo Edit]]
+- [[#themes][Themes]]
+- [[#transparency][Transparency]]
+- [[#which-key][Which-Key]]
 
-* IMPORTANT PROGRAMS TO LOAD FIRST
+* Important Programs To Load First
 ** Elpaca Package Manager
 #+begin_src emacs-lisp
   (defvar elpaca-installer-version 0.12)
@@ -267,7 +267,7 @@
 
 #+end_src
 
-* ALL THE ICONS
+* All The Icons
 This is an icon set that can be used with dashboard, dired, ibuffer and other Emacs programs.
   
 #+begin_src emacs-lisp
@@ -280,7 +280,7 @@ This is an icon set that can be used with dashboard, dired, ibuffer and other Em
     :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
 #+end_src
 
-* BUFFER-MOVE
+* Buffer-Move
 Creating some functions to allow us to easily move windows (splits) around.  The following block of code was taken from buffer-move.el found on the EmacsWiki:
 https://www.emacswiki.org/emacs/buffer-move.el
 
@@ -379,7 +379,7 @@ Company is a text completion framework for Emacs. The name stands for “complet
 
 #+end_src
 
-* DASHBOARD
+* Dashboard
 #+begin_src emacs-lisp
     (use-package dashboard
       :ensure t 
@@ -413,14 +413,13 @@ Company is a text completion framework for Emacs. The name stands for “complet
 
 
 #+end_src
-
-* DIMINISH
+* Diminish
 This package implements hiding or abbreviation of the modeline displays (lighters) of minor-modes.  With this package installed, you can add ‘:diminish’ to any use-package block to hide that particular mode in the modeline.
 #+begin_src emacs-lisp
 (use-package diminish :ensure t)
 #+end_src
 
-* DIRED
+* Dired
 #+begin_src emacs-lisp
     (use-package dired-open
       :ensure t
@@ -443,8 +442,7 @@ This package implements hiding or abbreviation of the modeline displays (lighter
   )
 
 #+end_src
-
-* FLYCHECK
+* Flycheck
 Install luacheck from your Linux distro’s repositories for flycheck to work correctly with lua files.  Install python-pylint for flycheck to work with python files.  Haskell works with flycheck as long as haskell-ghc or haskell-stack-ghc is installed.  For more information on language support for flycheck, read this.
 #+begin_src emacs-lisp
 (use-package flycheck
@@ -454,7 +452,7 @@ Install luacheck from your Linux distro’s repositories for flycheck to work co
   :init (global-flycheck-mode))
 #+end_src
 
-* FONTS
+* Fonts
 Defining the various fonts that Emacs will use.
 
 ** Setting the Font Face
@@ -499,7 +497,7 @@ You can use the bindings CTRL plus =/- for zooming in/out.  You can also use CTR
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 #+end_src
 
-* GIT PROGRAMS
+* Git Programs
 ** Git Time Machine
 [[https://github.com/emacsmirror/git-timemachine][git-timemachine]] is a program that allows you to move backwards and forwards through a file’s commits.  ‘SPC g t’ will open the time machine on a file if it is in a git repo.  Then, while in normal mode, you can use ‘CTRL-j’ and ‘CTRL-k’ to move backwards and forwards through the commits.
 #+begin_src emacs-lisp
@@ -527,7 +525,7 @@ But first we need to make sure transient is up to date
   :demand t)
 #+end_src
 
-* HIGHLIGHT TODO
+* Highlight TODO
 #+begin_src emacs-lisp
   (use-package hl-todo
     :ensure t
@@ -544,7 +542,7 @@ But first we need to make sure transient is up to date
             ("DEPRECATED" font-lock-doc-face bold))))
 
 #+end_src
-* IVY (COUNSEL)
+* Ivy (Counsel)
 + Ivy, a generic completion mechanism for Emacs.
 + Counsel, a collection of Ivy-enhanced versions of common Emacs commands.
 + Ivy-rich allows us to add descriptions alongside the commands in M-x.
@@ -586,19 +584,19 @@ But first we need to make sure transient is up to date
 
 #+end_src
 
-* LANGUAGE SUPPORT
+* Language Support
 Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM, AWK, C, C++, Fortran, Icon, IDL (CORBA), IDLWAVE, Java, Javascript, M4, Makefiles, Metafont, Modula2, Object Pascal, Objective-C, Octave, Pascal, Perl, Pike, PostScript, Prolog, Python, Ruby, Simula, SQL, Tcl, Verilog, and VHDL.  Other languages will require you to install additional modes.
 
 #+begin_src emacs-lisp
 (use-package lua-mode :ensure t)
 #+end_src
-* MINIBUFFER ESCAPE
+* Minibuffer Escape
 Hit ESC once to get out of the minibuffer instead of 3 times
 #+begin_src emacs-lisp
 (global-set-key [escape] 'keyboard-escape-quit)
 #+end_src
 
-* MODELINE
+* Modeline
 #+begin_src emacs-lisp
 (use-package doom-modeline
   :ensure t
@@ -610,7 +608,7 @@ Hit ESC once to get out of the minibuffer instead of 3 times
         doom-modeline-persp-icon t)) ;; adds folder icon next to persp name
 
 #+end_src
-* ORG MODE
+* Org Mode
 ** Enabling Table of Contents
 #+begin_src emacs-lisp
   (use-package toc-org
@@ -662,7 +660,7 @@ Org-tempo is not a separate package but a module within org that can be enabled.
 (require 'org-tempo)
 #+end_src
 
-* PROJECTILE
+* Projectile
 Projectile is a project interaction library for Emacs.
 
 #+begin_src emacs-lisp
@@ -672,7 +670,7 @@ Projectile is a project interaction library for Emacs.
     (projectile-mode 1))
 #+end_src
 
-* RAINBOW DELIMITERS
+* Rainbow Delimiters
 #+begin_src emacs-lisp
   (use-package rainbow-delimiters
     :ensure t
@@ -680,7 +678,7 @@ Projectile is a project interaction library for Emacs.
            (clojure-mode . rainbow-delimiters-mode)))
 
 #+end_src
-* RAINBOW MODE
+* Rainbow Mode
 Display the actual color as a background for any hex color value (ex. #ffffff).  The code block below enables rainbow-mode in all programming modes (prog-mode) as well as org-mode, which is why rainbow works in this document.  
 
 #+begin_src emacs-lisp
@@ -690,7 +688,7 @@ Display the actual color as a background for any hex color value (ex. #ffffff). 
     ((org-mode prog-mode) . rainbow-mode))
 #+end_src
 
-* RELOAD EMACS
+* Reload Emacs
 This is just an example of how to create a simple function in Emacs.  Use this function to reload Emacs after adding changes to the config.  Yes, I am loading the user-init-file twice in this function, which is a hack because for some reason, just loading the user-init-file once does not work properly.
 
 #+begin_src emacs-lisp
@@ -700,7 +698,7 @@ This is just an example of how to create a simple function in Emacs.  Use this f
   (load-file user-init-file))
 #+end_src
 
-* SANE DEFAULTS
+* Sane Defaults
 The following settings are simple modes that are enabled (or disabled) so that Emacs functions more like you would expect a proper editor/IDE to function.
 #+begin_src emacs-lisp
 (delete-selection-mode 1)    ;; You can select text and delete it by typing.
@@ -721,7 +719,7 @@ The following settings are simple modes that are enabled (or disabled) so that E
 (setq org-edit-src-content-indentation 0) ;; Set src block automatic indent to 0 instead of 2.
 
 #+end_src
-* SHELLS AND TERMINALS
+* Shells And Terminals
 In my configs, all of my shells (bash, fish, zsh and the ESHELL) require my shell-color-scripts-git package to be installed.  On Arch Linux, you can install it from the AUR.  Otherwise, go to my shell-color-scripts repository on GitLab to get it.
 
 ** Eshell
@@ -785,7 +783,7 @@ Vterm is a terminal emulator within Emacs.  The 'shell-file-name' setting sets t
 
 #+end_src
 
-* SUDO EDIT
+* Sudo Edit
 [[https://github.com/nflath/sudo-edit][sudo-edit]] gives us the ability to open files with sudo privileges or switch over to editing with sudo privileges if we initially opened the file without such privileges.
 
 #+begin_src emacs-lisp
@@ -797,7 +795,7 @@ Vterm is a terminal emulator within Emacs.  The 'shell-file-name' setting sets t
       "fU" '(sudo-edit :wk "Sudo edit file")))
 #+end_src
 
-* THEMES
+* Themes
 #+begin_src emacs-lisp
   (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
   (use-package doom-themes
@@ -813,7 +811,7 @@ Vterm is a terminal emulator within Emacs.  The 'shell-file-name' setting sets t
     )
 #+end_src
 
-* TRANSPARENCY
+* Transparency
 With Emacs version 29, true transparency has been added.  
 
 #+begin_src emacs-lisp
@@ -821,7 +819,7 @@ With Emacs version 29, true transparency has been added.
 
 #+end_src
 
-* WHICH-KEY
+* Which-Key
 #+begin_src emacs-lisp
     ;;  (use-package which-key
     ;;:ensure t
