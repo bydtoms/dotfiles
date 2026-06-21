@@ -745,11 +745,11 @@ Vterm is a terminal emulator within Emacs.  The 'shell-file-name' setting sets t
 #+end_src
 
 * THEMES
-** Doom Themes
 #+begin_src emacs-lisp
-    (use-package doom-themes
-      :ensure t
-  :custom
+  (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
+  (use-package doom-themes
+    :ensure t
+    :custom
     ;; Global settings (defaults)
     (doom-themes-enable-bold t)   ; if nil, bold is universally disabled
     (doom-themes-enable-italic t) ; if nil, italics is universally disabled
