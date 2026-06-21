@@ -672,6 +672,14 @@ Projectile is a project interaction library for Emacs.
     (projectile-mode 1))
 #+end_src
 
+* RAINBOW DELIMITERS
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+    :ensure t
+    :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
+           (clojure-mode . rainbow-delimiters-mode)))
+
+#+end_src
 * RAINBOW MODE
 Display the actual color as a background for any hex color value (ex. #ffffff).  The code block below enables rainbow-mode in all programming modes (prog-mode) as well as org-mode, which is why rainbow works in this document.  
 
