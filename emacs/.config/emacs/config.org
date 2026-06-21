@@ -28,6 +28,7 @@
   - [[#display-line-numbers-and-truncated-lines][Display Line Numbers and Truncated Lines]]
 - [[#ivy-counsel][IVY (COUNSEL)]]
 - [[#language-support][LANGUAGE SUPPORT]]
+- [[#minibuffer-escape][MINIBUFFER ESCAPE]]
 - [[#modeline][MODELINE]]
 - [[#org-mode][ORG MODE]]
   - [[#enabling-table-of-contents][Enabling Table of Contents]]
@@ -608,6 +609,12 @@ Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM,
 #+begin_src emacs-lisp
 (use-package lua-mode :ensure t)
 #+end_src
+* MINIBUFFER ESCAPE
+Hit ESC once to get out of the minibuffer instead of 3 times
+#+begin_src emacs-lisp
+(global-set-key [escape] 'keyboard-escape-quit)
+#+end_src
+
 * MODELINE
 #+begin_src emacs-lisp
 (use-package doom-modeline
