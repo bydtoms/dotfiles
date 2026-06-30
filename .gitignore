@@ -10,3 +10,7 @@ emacs/.config/emacs/recentf
 emacs/.config/emacs/eshell/history
 emacs/.config/emacs/eshell/lastdir
 emacs/.config/emacs/config.el
+emacs/.config/emacs/.dap-breakpoints
+emacs/.config/emacs/.lsp-session-v1
+emacs/.config/emacs/elpa/
+emacs/.config/emacs/tree-sitter/
