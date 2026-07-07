@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "nemo"
+-- local fileManager = "nemo"
 local menu = "hyprlauncher"
 local browser = "vivaldi"
 local launcher = "rofi -show drun -show-icons"
@@ -22,7 +22,7 @@ local secondMod = "SUPER + SHIFT"
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("emacsclient -c"))
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("fullscreen", "toggle"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(music))
