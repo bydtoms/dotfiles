@@ -22,6 +22,9 @@ alias zconf='nvim ~/.zshrc && source ~/.zshrc && clear && echo "Sucessfully sour
 alias ls='eza --icons=always --color=always --git --group-directories-first'
 alias ss='sesh connect $(sesh list | fzf)'
 alias gg='lazygit'
+alias cl='clear'
+alias gitl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gits="git status"
 
 # Autostart
 
