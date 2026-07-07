@@ -14,6 +14,7 @@ compinit
 # End of lines added by compinstall
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin/:$PATH
+export PATH=$PATH:/snap/bin
 
 # Aliases
 alias vim='nvim'
