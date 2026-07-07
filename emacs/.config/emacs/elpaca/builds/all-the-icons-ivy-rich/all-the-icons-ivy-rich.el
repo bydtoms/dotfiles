@@ -1,1 +1,0 @@
-/home/dan/.config/emacs/elpaca/sources/all-the-icons-ivy-rich/all-the-icons-ivy-rich.el

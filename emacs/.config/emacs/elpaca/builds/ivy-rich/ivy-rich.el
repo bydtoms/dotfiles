@@ -1,1 +1,0 @@
-/home/dan/.config/emacs/elpaca/sources/ivy-rich/ivy-rich.el
